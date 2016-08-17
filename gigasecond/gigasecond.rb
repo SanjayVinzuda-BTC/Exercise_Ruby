@@ -1,10 +1,5 @@
 class Gigasecond
-  def self.from(d)
-    @anniversary = 0
-    date = d
-    @anniversary = date +  (10**9)
-    puts "#{date}"
-    puts "#{@anniversary}"
+  def self.from(date_time)
+    @anniversary = date_time +  (10**9)
   end
-  @anniversary
 end
