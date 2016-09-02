@@ -1,7 +1,7 @@
 class Trinary
 
   def initialize(no)
-    @no = no
+    @num = no
     @trinary = Array.new
     @mul = 3
     @sum = 0
@@ -16,9 +16,9 @@ class Trinary
 
     for i in  0..@length
       power = @length - i
-      @ans += ( @trinary[i]*(mul**power) )
-      sum = @trinary[i]*power**mul
-      puts "#{@trinary[i]} * #{power} ^ #{mul} =  #{sum} "
+      @ans += ( @trinary[i]*(@mul**power) )
+      sum = @trinary[i]*power**@mul
+      puts "#{@trinary[i]} * #{power} ^ #{@mul} =  #{sum} "
     end
    @ans
   end
