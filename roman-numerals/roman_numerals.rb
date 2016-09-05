@@ -1,3 +1,6 @@
+gem 'byebug'
+require 'byebug'
+
 class Fixnum
   ROMAN_NUMBERS = {
     1000 => "M",
@@ -15,19 +18,28 @@ class Fixnum
     1 => "I",
   }
 
+  ## My Logic
   def to_roman
     n = self
     roman = ""
-    ROMAN_NUMBERS.each do |pair|
-      letter = pair[1]
-      value = pair[0]
-      roman += letter*(n / value)
-      n = n % value
+    ROMAN_NUMBERS.each do |r|
+      temp_letter = r[1]
+      temp_value = r[0]
+      puts "--latter--#{temp_letter}"
+      puts "--value--#{temp_value}"
+      roman += temp_letter*(n / temp_value)
+      puts "--roman--#{roman}"
+      puts "--n before--#{n}"
+      n = n % temp_value
+      puts "--n after--#{n}"
+      # byebug
     end
     return roman
   end
 
 
+
+  ## Google Help
 
   # def to_roman
   #   n = self
@@ -40,6 +52,7 @@ class Fixnum
   #   puts "Roman Number is:  #{roman_array} and Actual Number is #{no}"
   #   return roman_array
   # end
+
 
   # def to_roman
   #   result = ""
