@@ -71,11 +71,18 @@ class RaindropsTest < Minitest::Test
     assert_equal 'Plong', Raindrops.convert(49)
   end
 
+  def test_52
+    assert_equal "52", drops.convert(52)
+  end
+
   def test_105
     
     assert_equal 'PlingPlangPlong', Raindrops.convert(105)
   end
 
+  def test_12121
+    assert_equal "12121", drops.convert(12121)
+  end
   # Problems in exercism evolve over time, as we find better ways to ask
   # questions.
   # The version number refers to the version of the problem you solved,

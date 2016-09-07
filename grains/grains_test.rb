@@ -39,7 +39,6 @@ class GrainsTest < Minitest::Test
   end
 
   def test_total_grains
-     
     assert_equal 18_446_744_073_709_551_615, Grains.total
   end
 end

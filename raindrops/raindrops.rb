@@ -31,7 +31,7 @@ class Raindrops
 
       @raindrop_string = Array.new
 
-
+      @mul = 1
       @prime_array.each do |prime|
         if prime == 3
           puts "----====--"
@@ -41,7 +41,8 @@ class Raindrops
         elsif prime == 7
           @raindrop_string.push("Plong")
         else
-          # @raindrop_string.push(prime)
+          @mul*=prime
+          @prime_array.push(@mul)
         end
       end
 

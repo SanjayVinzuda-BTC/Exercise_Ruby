@@ -1,18 +1,12 @@
 class Grains
- 
-  # My Logic
   def self.square(num)
-    # @grains = Array.new
-    @grains = (0..63).map {|j| 2**j } # print 1..64 grains
-    puts "--#{@grains}"
-    @grains[num - 1]
+    @grains = (0..num-1).map {|j| 2**j } # print 1..64 grains
+    @grains[-1]
   end
 
   def self.total
-    sum = 0
-    @grains.each { |a| sum+=a }
-    sum
-    # printf "-----Total is #{sum}"
+    # sum = 0
+    (0..63).reduce { |a| 2**a }
   end
 
 
