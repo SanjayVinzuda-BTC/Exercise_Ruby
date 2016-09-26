@@ -1,3 +1,4 @@
+# require 'byebug'
 class Sieve
   def initialize(no)
     @number = no
@@ -10,6 +11,7 @@ class Sieve
       (start..no).each do |num|
         if ( no % num  == 0) && num != no
           primes.delete(no)
+          # byebug
           break
         end
       end
